@@ -1,0 +1,14 @@
+From: Santiago Vila <sanvila@debian.org>
+Subject: Remove generated files in clean target
+
+--- a/makefile
++++ b/makefile
+@@ -97,7 +97,7 @@
+ 	@echo $(LISTING)
+ 
+ clean:
+-	rm -f a.out *.o *.obj maketab maketab.exe *.bb *.bbg *.da *.gcov *.gcno *.gcda # proctab.c
++	rm -f a.out *.o *.obj maketab maketab.exe proctab.c ytab.c ytab.h
+ 
+ cleaner:
+ 	rm -f a.out *.o *.obj maketab maketab.exe *.bb *.bbg *.da *.gcov *.gcno *.gcda proctab.c ytab*

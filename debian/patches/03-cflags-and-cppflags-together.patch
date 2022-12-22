@@ -1,0 +1,23 @@
+From: Santiago Vila <sanvila@debian.org>
+Subject: Drop CFLAGS when linking. Add CPPFLAGS when compiling
+
+--- a/makefile
++++ b/makefile
+@@ -50,7 +50,7 @@
+ 	 awk.1
+ 
+ a.out:	ytab.o $(OFILES)
+-	$(CC) $(CFLAGS) ytab.o $(OFILES) $(ALLOC)  -lm
++	$(CC) ytab.o $(OFILES) $(ALLOC)  -lm
+ 
+ $(OFILES):	awk.h ytab.h proto.h
+ 
+@@ -65,7 +65,7 @@
+ 	./maketab >proctab.c
+ 
+ maketab:	ytab.h maketab.c
+-	$(CC) $(CFLAGS) maketab.c -o maketab
++	$(CC) $(CPPFLAGS) $(CFLAGS) maketab.c -o maketab
+ 
+ bundle:
+ 	@cp ytab.h ytabh.bak

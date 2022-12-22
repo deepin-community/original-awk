@@ -1,0 +1,30 @@
+From: Santiago Vila <sanvila@debian.org>
+Subject: awk is called original-awk here
+
+--- a/awk.1
++++ b/awk.1
+@@ -7,12 +7,12 @@
+ .fi
+ .ft 1
+ ..
+-.TH AWK 1
++.TH ORIGINAL-AWK 1
+ .CT 1 files prog_other
+ .SH NAME
+-awk \- pattern-directed scanning and processing language
++original-awk \- pattern-directed scanning and processing language
+ .SH SYNOPSIS
+-.B awk
++.B original-awk
+ [
+ .BI \-F
+ .I fs
+@@ -32,7 +32,7 @@
+ ]
+ .SH DESCRIPTION
+ .I Awk
+-scans each input
++(original-awk) scans each input
+ .I file
+ for lines that match any of a set of patterns specified literally in
+ .I prog

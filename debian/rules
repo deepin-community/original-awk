@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+package = original-awk
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+CC = gcc
+CFLAGS := `dpkg-buildflags --get CFLAGS` -Wall
+LDFLAGS := `dpkg-buildflags --get LDFLAGS`
+CPPFLAGS := `dpkg-buildflags --get CPPFLAGS`
+
+override_dh_auto_build:
+	dh_auto_build -- CC="$(CC)" CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)" ALLOC="$(LDFLAGS)" YACC="bison -d -y"
+
+override_dh_auto_install:
+	install -m 755 a.out debian/$(package)/usr/bin/$(package)
+	install -m 644 awk.1 debian/$(package)/usr/share/man/man1/$(package).1

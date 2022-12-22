@@ -1,0 +1,221 @@
+original-awk (2018-08-27-1) unstable; urgency=medium
+
+  * New upstream release, now hosted on github. Closes: #976161.
+  * Upgrade build-dependency on debhelper.
+  * Rules-Requires-Root: no.
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 21 Dec 2020 22:24:00 +0100
+
+original-awk (2012-12-20-6) unstable; urgency=medium
+
+  * Rename all patches to end with .patch.
+  * Standards-Version: 3.9.8 (no special changes for this).
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 08 Jan 2017 18:47:44 +0100
+
+original-awk (2012-12-20-5) unstable; urgency=medium
+
+  * Switch to dh. This should make the package reproducible again.
+  * Pass both CFLAGS and CPPFLAGS to makefile, and modify makefile
+    so that those variables are used when they have to be used.
+    This way we can still use make's implicit .c to .o rule.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 11 Oct 2015 12:29:16 +0200
+
+original-awk (2012-12-20-4) unstable; urgency=medium
+
+  * Multi-Arch: foreign. Closes: #795115.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 11 Aug 2015 17:48:00 +0200
+
+original-awk (2012-12-20-3) unstable; urgency=low
+
+  * Use gzip -n to make the build reproducible. Closes: #778203.
+  * Fix mtimes before building binary package as well.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 15 May 2015 14:00:42 +0200
+
+original-awk (2012-12-20-2) unstable; urgency=medium
+
+  * Added descriptions to debian/patches/*.
+  * Added Homepage field.
+  * Added hardening=+all.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 09 Oct 2014 12:42:52 +0200
+
+original-awk (2012-12-20-1) unstable; urgency=low
+
+  * New upstream release.
+  * Pass YACC="bison -d -y" to upstream makefile.
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 12 Oct 2013 18:46:00 +0200
+
+original-awk (2011-08-10-2) unstable; urgency=low
+
+  * Build with hardened flags.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 03 Jun 2012 17:00:18 +0200
+
+original-awk (2011-08-10-1) unstable; urgency=low
+
+  * New upstream release. Closes: #640653.
+  * Added recommended targets build-arch and build-indep.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 22 Sep 2011 12:22:54 +0200
+
+original-awk (2011-05-06-1) unstable; urgency=low
+
+  * New upstream release. Closes: #627215.
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 06 Jun 2011 13:15:27 +0200
+
+original-awk (2010-05-23-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 11 Jun 2010 18:09:12 +0200
+
+original-awk (2010-02-08-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to 3.0 (quilt) source format.
+  * Pristine source, as dpkg-source handles flat tarballs.
+  * Files ytab.c, ytab.h and proctab.c are no longer excluded from the
+    orig tarball. Instead, they are removed in the clean target.
+  * Use strip with appropriate options instead of "install -s"
+    to make lintian happy.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 18 Feb 2010 23:42:00 +0100
+
+original-awk (2009-11-26-1) unstable; urgency=low
+
+  * New upstream release. Closes: #564892.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 12 Jan 2010 21:43:18 +0100
+
+original-awk (2007-10-23-4) unstable; urgency=medium
+
+  * Changed awk_getline to awkgetline, as there is already an "awkprintf".
+  * Added missing rename in maketab.c. Closes: #555919.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 12 Nov 2009 17:42:36 +0100
+
+original-awk (2007-10-23-3) unstable; urgency=medium
+
+  * Renamed getline to awk_getline to make eglibc happy. Closes: #552859.
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 09 Nov 2009 10:46:00 +0100
+
+original-awk (2007-10-23-2) unstable; urgency=low
+
+  * Changed URL from which the source was downloaded to match reality.
+  * Do not ignore errors from make clean (lintian warning).
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 30 Aug 2009 19:50:22 +0200
+
+original-awk (2007-10-23-1) unstable; urgency=low
+
+  * New upstream release. Closes: #491080.
+  * Changed version string to match actual release date (20071023).
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 26 Jul 2008 17:30:10 +0200
+
+original-awk (2007-05-01-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Santiago Vila <sanvila@debian.org>  Mon,  2 Jul 2007 18:33:46 +0200
+
+original-awk (2005-04-24-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 18 Nov 2005 21:53:08 +0100
+
+original-awk (2004-12-22-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 24 Dec 2004 20:19:48 +0100
+
+original-awk (2004-02-07-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 25 Jun 2004 11:01:16 +0200
+
+original-awk (2003-07-31-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Santiago Vila <sanvila@debian.org>  Wed, 13 Aug 2003 11:28:16 +0200
+
+original-awk (2003-03-14-1) unstable; urgency=low
+
+  * New upstream release. awk will now do character comparisons and case
+    conversions in national language, but "." will always be the decimal
+    point separator on input and output regardless of national language.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 24 Apr 2003 23:09:04 +0200
+
+original-awk (2002-06-28-1) unstable; urgency=low
+
+  * New upstream release.
+  * Standards-Version: 3.5.7.
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 16 Sep 2002 20:38:02 +0200
+
+original-awk (2002-02-10-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun,  3 Mar 2002 16:06:02 +0100
+
+original-awk (2000-11-15-3) unstable; urgency=low
+
+  * Added support for DEB_BUILD_OPTIONS.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 30 Nov 2001 17:29:12 +0100
+
+original-awk (2000-11-15-2) unstable; urgency=low
+
+  * Moved update-alternatives call from postrm to prerm as lintian suggests.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri,  7 Sep 2001 20:04:05 +0200
+
+original-awk (2000-11-15-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Santiago Vila <sanvila@debian.org>  Wed, 10 Jan 2001 18:39:45 +0100
+
+original-awk (2000-05-25-2) unstable; urgency=low
+
+  * Build-Depends: bison.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 29 Aug 2000 18:52:52 +0200
+
+original-awk (2000-05-25-1) frozen unstable; urgency=high
+
+  * New upstream release, 8-bit clean (Closes: Bug#63836).
+  * Standards-Version: 3.1.1.
+
+ -- Santiago Vila <sanvila@ctv.es>  Sat, 27 May 2000 18:24:45 +0200
+
+original-awk (1999-06-02-1) unstable; urgency=low
+
+  * New upstream release. Should fix a problem with glibc 2.1.
+
+ -- Santiago Vila <sanvila@ctv.es>  Thu,  3 Jun 1999 18:14:59 +0200
+
+original-awk (1999-05-10-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Santiago Vila <sanvila@ctv.es>  Wed, 26 May 1999 17:36:45 +0200
+
+original-awk (1998-02-11-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Santiago Vila <sanvila@ctv.es>  Mon,  6 Apr 1998 20:03:23 +0200

@@ -1,0 +1,3 @@
+01-awk-is-called-original-awk-here.patch
+02-remove-generated-files-in-clean-target.patch
+03-cflags-and-cppflags-together.patch

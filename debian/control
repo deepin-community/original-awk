@@ -1,0 +1,19 @@
+Source: original-awk
+Section: interpreters
+Priority: optional
+Maintainer: Santiago Vila <sanvila@debian.org>
+Standards-Version: 4.5.1
+Build-Depends: debhelper-compat (= 13), bison
+Homepage: https://github.com/onetrueawk/awk
+Rules-Requires-Root: no
+
+Package: original-awk
+Architecture: any
+Pre-Depends: ${shlibs:Depends}
+Depends: ${misc:Depends}
+Provides: awk
+Multi-Arch: foreign
+Description: The original awk described in "The AWK Programming Language"
+ This is the version of awk described in "The AWK Programming Language",
+ by Al Aho, Brian Kernighan, and Peter Weinberger
+ (Addison-Wesley, 1988, ISBN 0-201-07981-X).
